@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Extensión de Soporte",
+    "version": "1.0",
+    "description": "Descarga y procesa el HTML de la página activa.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage",
+      "downloads"
+    ],
+    "icons": {
+      "128": "src/icono.png"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
